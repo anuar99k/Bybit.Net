@@ -45,5 +45,10 @@ namespace Bybit.Net.Objects.Models.V5
         /// Usd index price
         /// </summary>
         public decimal? UsdIndexPrice { get; set; }
+
+        public string Bid1Price { get; set; }
+        public string Bid1Size { get; set; }
+        public string Ask1Price { get; set; }
+        public string Ask1Size { get; set; }
     }
 }

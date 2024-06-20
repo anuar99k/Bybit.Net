@@ -62,7 +62,7 @@ namespace Bybit.Net.Clients.V5
         public override string FormatSymbol(string baseAsset, string quoteAsset) => baseAsset.ToUpperInvariant() + quoteAsset.ToUpperInvariant();
 
         /// <inheritdoc />
-        protected override Query? GetAuthenticationRequest(SocketConnection connection)
+        protected virtual Query? GetAuthenticationRequest(SocketConnection connection)
         {
             if (connection.ConnectionUri.AbsolutePath.EndsWith("private"))
             {
@@ -230,7 +230,8 @@ namespace Bybit.Net.Clients.V5
                 }
             });
 
-            return await QueryAsync(BaseAddress.AppendPath("/v5/trade"), query, ct).ConfigureAwait(false);
+            throw new NotImplementedException();
+            //return await QueryAsync(BaseAddress.AppendPath("/v5/trade"), query, ct).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -281,7 +282,8 @@ namespace Bybit.Net.Clients.V5
                 }
             });
 
-            return await QueryAsync(BaseAddress.AppendPath("/v5/trade"), query, ct).ConfigureAwait(false);
+            throw new NotImplementedException();
+            //return await QueryAsync(BaseAddress.AppendPath("/v5/trade"), query, ct).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -310,8 +312,9 @@ namespace Bybit.Net.Clients.V5
                 }
             });
 
-            return await QueryAsync(BaseAddress.AppendPath("/v5/trade"), query, ct).ConfigureAwait(false);
-		}
+            throw new NotImplementedException();
+            //return await QueryAsync(BaseAddress.AppendPath("/v5/trade"), query, ct).ConfigureAwait(false);
+        }
 		
         public async Task<CallResult<UpdateSubscription>> SubscribeToDisconnectCancelAllTopicAsync(ProductType productType, CancellationToken ct = default)
         {
