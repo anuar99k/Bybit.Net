@@ -130,6 +130,25 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 3.10.3 - 02 Jul 2024
+    * Updated CryptoExchange.Net to V7.8.0, see https://github.com/JKorf/CryptoExchange.Net/releases/tag/7.8.0
+    * Added Turkey environment
+    * Added prelisting properties to V5 linear/inverse tickers and symbols response models
+
+* Version 3.10.2 - 26 Jun 2024
+    * Fixed OrderBook model deserialization when updateId is too large for integer
+
+* Version 3.10.1 - 25 Jun 2024
+    * Updated CryptoExchange.Net to 7.7.2, see https://github.com/JKorf/CryptoExchange.Net/releases/tag/7.7.2
+    * Fixed deserialization issue BybitPosition model
+
+* Version 3.10.0 - 23 Jun 2024
+    * Updated CryptoExchange.Net to version 7.7.0, see https://github.com/JKorf/CryptoExchange.Net/releases/tag/7.7.0
+    * Added V5 websocket order placement API
+    * Updated response models from classes to records
+    * Added and updated DCP endpoints end subscription
+    * Added dedicated connection configuration; a websocket connection can now be established before making the first request by calling `bybitSocketClient.V5PrivateApi.PrepareConnectionsAsync();`
+
 * Version 3.9.0 - 11 Jun 2024
     * Added socketClient.V5PrivateApi.SubscribeToMinimalUserTradeUpdatesAsync private subscription
     * Updated CryptoExchange.Net to v7.6.0, see https://github.com/JKorf/CryptoExchange.Net?tab=readme-ov-file#release-notes for release notes
